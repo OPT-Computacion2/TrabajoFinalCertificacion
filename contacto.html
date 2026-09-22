@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto — Expediente: Futuros Distópicos</title>
+<meta name="description" content="Formulario de contacto del sitio Expediente: Futuros Distópicos.">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tema.css">
+<link rel="stylesheet" href="css/styles.css">
+<!-- 5.b Estilos incrustados específicos de esta página -->
+<style>
+  .contact-hero{ background: var(--ink); color: var(--paper); padding: 46px 0; border-bottom: 6px solid var(--red); }
+  .contact-hero h1{ color: var(--paper); }
+  .clock{
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    display: inline-block;
+    padding: 6px 12px;
+    margin-top: 14px;
+  }
+  .char-count{ font-family: var(--mono); font-size: 0.78rem; color: var(--ink-soft); }
+  .char-count[data-warn="true"]{ color: var(--red); }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="site-header__bar">
+    <div class="site-header__title">
+      <a href="index.html">Expediente: Futuros Distópicos</a>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal"><span class="nav-toggle__icon" aria-hidden="true">☰</span> Explorar obras</button>
+    <nav class="side-menu" id="menu-principal" aria-label="Navegación por categorías" aria-hidden="true">
+      <div class="side-menu__header"><p class="side-menu__title">Explorar el expediente</p><button class="side-menu__close" type="button" aria-label="Cerrar menú">×</button></div>
+      <a class="side-menu__main" href="index.html">El género</a>
+      <details><summary>Novelas</summary><ul><li><a href="1984.html">1984</a></li></ul></details>
+      <details><summary>Cómics</summary><ul><li><a href="v-for-vendetta.html">V for Vendetta</a></li></ul></details>
+      <details><summary>Manga</summary><ul><li><a href="20th-century-boys.html">20th Century Boys</a></li></ul></details>
+      <!-- Añadir aquí nuevas categorías y sus obras conforme crezca el expediente. -->
+      <a class="side-menu__main" href="contacto.html" aria-current="page">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido-principal">
+
+  <section class="contact-hero">
+    <div class="container">
+      <p class="section-label" style="color:var(--gold);">// Enviar reporte</p>
+      <h1>Contacta al expediente</h1>
+      <p style="max-width:56ch; color:#d8d2c1;">¿Encontraste una pista que se nos escapó, o quieres sugerir otra obra distópica para un próximo expediente? Escríbenos.</p>
+      <p class="clock" id="reloj" aria-live="off">Hora del sistema: --:--:--</p>
+      <div class="counter-box" id="contador-contacto" aria-live="polite">
+        Visitas a Contacto: <strong id="contador-contacto-numero">—</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="file-section">
+    <div class="container layout-two">
+      <article>
+        <p class="section-label">// Formulario de contacto</p>
+        <h2>Envíanos tu mensaje</h2>
+        <form id="contact-form" class="form-grid" novalidate>
+          <div class="form-field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-field">
+            <label for="obra">Obra sobre la que escribes</label>
+            <select id="obra" name="obra">
+              <option value="general">Comentario general</option>
+              <option value="1984">1984</option>
+              <option value="vendetta">V for Vendetta</option>
+              <option value="20cb">20th Century Boys</option>
+              <option value="sugerencia">Sugerencia de otra obra</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" maxlength="400" required></textarea>
+            <!-- 13. Segundo script del sitio: contador de caracteres -->
+            <span class="char-count" id="char-count">0 / 400 caracteres</span>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn--solid" style="border-color:var(--red); background:var(--red);">Enviar mensaje</button>
+            <span id="form-status" role="status"></span>
+          </div>
+          <p class="form-note">Este formulario es una demostración para fines académicos: no envía datos a ningún servidor externo.</p>
+        </form>
+      </article>
+
+      <aside class="sidenote">
+        <h3>Otras formas de contacto</h3>
+        <ul>
+          <li>Comité de certificación 51120, UACM San Lorenzo Tezonco</li>
+          <li>Consulta también la <a href="index.html#lecturas">guía de lecturas en PDF</a></li>
+          <li>Vuelve a <a href="index.html">la página del género</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Proyecto de certificación · Computación II · UACM San Lorenzo Tezonco</p>
+    <p><a href="index.html">Volver al género</a></p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+  function actualizarReloj() {
+    var el = document.getElementById("reloj");
+    var ahora = new Date();
+    var hh = String(ahora.getHours()).padStart(2, "0");
+    var mm = String(ahora.getMinutes()).padStart(2, "0");
+    var ss = String(ahora.getSeconds()).padStart(2, "0");
+    el.textContent = "Hora del sistema: " + hh + ":" + mm + ":" + ss;
+  }
+  actualizarReloj();
+  setInterval(actualizarReloj, 1000);
+
+  (function () {
+    var el = document.getElementById("contador-contacto-numero");
+    var key = "expediente-distopias-visitas-contacto";
+    var visitas = parseInt(localStorage.getItem(key) || "0", 10) + 1;
+    localStorage.setItem(key, String(visitas));
+    el.textContent = visitas.toLocaleString("es-MX");
+  })();
+
+  var textarea = document.getElementById("mensaje");
+  var contador = document.getElementById("char-count");
+  textarea.addEventListener("input", function () {
+    var len = textarea.value.length;
+    contador.textContent = len + " / 400 caracteres";
+    contador.setAttribute("data-warn", len > 360 ? "true" : "false");
+  });
+
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var status = document.getElementById("form-status");
+    status.textContent = "Mensaje registrado. ¡Gracias por escribir!";
+    status.setAttribute("data-state", "ok");
+    this.reset();
+    contador.textContent = "0 / 400 caracteres";
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+/* Tema padre: una única paleta para todo el expediente. */
+:root {
+  --color-fondo: #ede8dd;
+  --color-superficie: #e3ddcc;
+  --color-texto: #1b1b1a;
+  --color-texto-suave: #3a3a37;
+  --color-acento: #962020;
+  --color-acento-oscuro: #6e1717;
+  --color-enlace: #4a5a57;
+  --color-detalle: #8c7a4e;
+  --color-linea: rgba(27, 27, 26, 0.18);
+
+  /* Alias de compatibilidad para las páginas existentes. */
+  --paper: var(--color-fondo);
+  --paper-dark: var(--color-superficie);
+  --ink: var(--color-texto);
+  --ink-soft: var(--color-texto-suave);
+  --red: var(--color-acento);
+  --red-dark: var(--color-acento-oscuro);
+  --teal: var(--color-enlace);
+  --gold: var(--color-detalle);
+  --line: var(--color-linea);
+  --radius: 2px;
+  --serif: "Spectral", "DejaVu Serif", Georgia, serif;
+  --sans: "Inter", "Liberation Sans", Arial, sans-serif;
+  --mono: "IBM Plex Mono", "DejaVu Sans Mono", monospace;
+}

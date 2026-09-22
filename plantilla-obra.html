@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[Título de la obra] — Expediente: Futuros Distópicos</title>
+  <link rel="stylesheet" href="css/tema.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/obras.css">
+</head>
+<body class="work-page work-page--novel">
+  <!-- Cambiar el modificador final por work-page--comic o work-page--manga cuando corresponda. -->
+  <header class="site-header">
+    <div class="site-header__bar">
+      <div class="site-header__title">
+        <a href="index.html">Expediente: Futuros Distópicos</a>
+      </div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal"><span class="nav-toggle__icon" aria-hidden="true">☰</span> Explorar obras</button>
+      <nav class="side-menu" id="menu-principal" aria-label="Navegación por categorías" aria-hidden="true">
+        <div class="side-menu__header"><p class="side-menu__title">Explorar el expediente</p><button class="side-menu__close" type="button" aria-label="Cerrar menú">×</button></div>
+        <a class="side-menu__main" href="index.html">El género</a>
+        <details><summary>Novelas</summary><ul><!-- Añadir aquí las novelas. --></ul></details>
+        <details><summary>Cómics</summary><ul><!-- Añadir aquí los cómics. --></ul></details>
+        <details><summary>Manga</summary><ul><!-- Añadir aquí los mangas. --></ul></details>
+        <!-- Añadir nuevas categorías aquí. -->
+        <a class="side-menu__main" href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido-principal">
+    <section class="work-hero"><div class="container">
+      <img class="work-hero__cover" src="img/[portada].jpg" alt="Descripción de la portada">
+      <div><span class="medium-badge">[Medio]</span><h1>[Título]</h1><p class="lede">[Resumen]</p>
+        <ul class="fact-list"><li><b>Autor</b> [Autor]</li><li><b>Publicación</b> [Fecha]</li></ul>
+      </div>
+    </div></section>
+    <section class="file-section"><div class="container layout-two"><article class="dossier-copy">
+      <p class="section-label">// El medio</p><h2>[Subtítulo]</h2><p>[Contenido]</p>
+    </article><div class="sidebar-stack"><aside class="sidenote"><h3>Ficha rápida</h3><ul><li>[Dato]</li></ul></aside><section class="quote-panel"><p class="section-label">// Frases o símbolos</p><ul class="quote-panel__list"><li>[Concepto breve]</li><li>[Concepto breve]</li></ul></section></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container"><p>Proyecto de certificación · Computación II</p></div></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
